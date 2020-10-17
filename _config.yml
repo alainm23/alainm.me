@@ -37,7 +37,7 @@ dash:
   animation_speed: 50
 
 # Build settings
-theme: jekyll-dash
+theme: alainm.me
 
 plugins:
  - jekyll-feed

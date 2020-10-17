@@ -1,0 +1,22 @@
+<div class="author-box">
+    {% if site.avatar_source == "github" and site.github_username %}
+        {% capture avatar_image %}
+            https://github.com/{{ site.github_username }}.png
+        {% endcapture %}
+    {% elsif site.plugins contains "liquid-md5" %}
+        {% capture avatar_image %}
+            https://gravatar.com/avatar/{{ site.email | downcase | md5 }}?s=256
+        {% endcapture %}
+    {% endif %}
+    {% if avatar_image %}
+        <img src="{{ avatar_image }}" class="author-avatar" alt="Avatar" />
+    {% endif %}
+<div class="summary">
+    <ul class="fa-ul">
+        <li><i class="fa-li fa fa-briefcase"></i>Fundador de <a href="http://useplanner.com/">Planner</a></li>
+        <li><i class="fa-li fa fa-pencil-ruler"></i>Desarrollador de software Open Source</li>
+        <!-- <li><i class="fa-li fa fa-heart"></i>Spouse and bestie of <a href="https://katiemkblaede.com/">Katie M. K. Blaede</a></li> -->
+        <li><i class="fa-li fa fa-map-marker"></i>Vivo en <a href="https://www.google.com/maps/place/Cusco/@-13.5300096,-72.0092902,12z/data=!3m1!4b1!4m5!3m4!1s0x916dd5d826598431:0x2aa996cc2318315d!8m2!3d-13.53195!4d-71.9674626">Cusco, Perú</a></li>
+    </ul>
+    </div>
+</div>

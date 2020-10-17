@@ -1,0 +1,28 @@
+language: ruby
+rvm:
+- 2.6.3
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+branches:
+  only:
+    - master
+
+sudo: required
+
+before_install:
+  - nvm install node
+  - ruby -v
+
+install:
+  - gem install bundle jekyll
+  - bundle check || bundle install
+  - npm install -g https://github.com/firebase/firebase-tools.git
+
+before_script:
+  - JEKYLL_ENV=production bundle exec jekyll build
+
+script:
+  - firebase deploy --project="$FIREBASE_PROJECT" --token "$FIREBASE_API_TOKEN"

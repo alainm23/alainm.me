@@ -2,6 +2,25 @@
   color: #F24784;
 }
 
+
+.read-more {
+  color: inherit;
+  content: "→";
+  font-style: normal;
+  font-weight: inherit;
+  transition: padding 0.15s ease-in-out;  
+}
+
+.read-more.twitter {
+  color: #55acee;
+}
+
+.read-more {
+  i {
+    margin-right: 6px;
+  }
+}
+
 .site-header {
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;

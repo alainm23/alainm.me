@@ -18,20 +18,6 @@ dash:
 
   disqus:
     shortname: bitbrain-github-io
-
-  # generate social links in footer
-  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
-  social_links:
-    - url: https://twitter.com/bitbrain_
-      icon: twitter-square
-      color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
-      color: red
-    - url: https://github.com/bitbrain
-      icon: github-square
-      color: purple
-
   show_author: true
 
   animation_speed: 50
@@ -49,3 +35,4 @@ plugins:
 # Replaces the default avatar provider (gravatar)
 avatar_source: github
 github_username: alainm23
+twitter: alainm23
